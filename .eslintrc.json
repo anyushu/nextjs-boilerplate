@@ -8,7 +8,6 @@
     "plugin:tailwindcss/recommended"
   ],
   "rules": {
-    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "no-console": "warn",
     "import/order": [
@@ -18,7 +17,17 @@
         "newlines-between": "always",
         "alphabetize": { "order": "asc", "caseInsensitive": true }
       }
-    ]
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/hook-use-state": "error",
+    "react/jsx-boolean-value": "error",
+    "react/jsx-curly-brace-presence": "error"
   },
   "ignorePatterns": ["*.config.js"]
 }
